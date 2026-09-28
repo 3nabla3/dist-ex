@@ -2,5 +2,19 @@
 name = "dist-ex"
 version = "0.1.0"
 edition = "2024"
+repository = "https://github.com/3nabla3/dist-ex"
+authors = ["3nabla3"]
+description = "example description"
+
+[package.metadata.wix]
+upgrade-guid = "F47929C0-BBA4-4581-947A-552DD557DB5B"
+path-guid = "2BA0E4DA-02BA-4892-9618-31B434E9A971"
+license = false
+eula = false
 
 [dependencies]
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
